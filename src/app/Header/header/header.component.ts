@@ -1,9 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { ActivatedRoute, Route, Router, RouterLink, RouterOutlet } from '@angular/router';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'; // Import FontAwesomeModule
-import { } from '@fortawesome/fontawesome-svg-core'
-// import { f } from "../../../../node_modules/@angular/material/icon-module.d-COXCrhrh";
+import { Router, RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
 @Component({
@@ -28,8 +25,6 @@ export class HeaderComponent {
   navigate(link: string) {
     this._router.navigateByUrl(`/${link}`);
   }
-
-  public x: string = "Hello";
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
