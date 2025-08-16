@@ -1,27 +1,21 @@
 /* Home Page Sections */
-.features, .testimonials, .content {
+.features {
     background: #fff;
-    padding: 3rem;
+    padding: 1rem;
+    margin: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     margin-bottom: 2rem;
 }
 
-h2, .product-listing h1 {
-    text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
-    color: #004d40;
-}
-
-.feature-container, .testimonial-container {
+.feature-container {
     display: flex;
     gap: 2rem;
     justify-content: center;
     flex-wrap: wrap;
 }
 
-.feature-item, .testimonial-item {
+.feature-item {
     flex: 1;
     min-width: 250px;
     text-align: center;
@@ -32,13 +26,6 @@ h2, .product-listing h1 {
     color: #00695c;
 }
 
-.testimonial-item p {
-    font-style: italic;
-    margin-bottom: 1rem;
-}
+@media (max-width: 768px) {
 
-.testimonial-item cite {
-    display: block;
-    font-weight: bold;
-    color: #555;
-}   
+}
