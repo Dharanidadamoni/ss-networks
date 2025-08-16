@@ -1,13 +1,18 @@
 <main>
     <h1>Our High-Quality Safety Nets</h1>
-    <section class="product-listing">
-        @for (product of products; track $index) {
-        <div class="product-item">
-            <img [src]="product.imgPath">
-            <h3>{{product.heading}}</h3>
-            <p>{{product.description}}</p>
-            <a href="www.google.com" class="cta-button">Inquire Now</a>
-        </div>
+    <section>
+        @for (category of products; track $index) {
+            <h2>{{category.category}}</h2>
+            <div class="product-listing">
+                @for (product of category.categoryList; track $index) {
+                    <div class="product-item">
+                        <img [src]="product.imgPath">
+                        <h3>{{product.heading}}</h3>
+                        <p>{{product.description}}</p>
+                        <a href="www.google.com" class="cta-button">Inquire Now</a>
+                    </div>
+                }
+            </div>
         }
     </section>
 </main>

@@ -13,12 +13,6 @@ body {
     color: #333;
 }
 
-.main{
-    margin: 0;
-    background-image: url(../src/assets/imgs/balcony-net1.png);
-    filter: blur(1px);
-}
-
 .hero::before {
     content: "";
     position: absolute;
@@ -32,7 +26,13 @@ body {
     background-position: center;      /* Center the image */
     background-repeat: no-repeat;     /* Prevent tiling */
     z-index: -1;
+    // filter: blur(2px);
+}
+
+.bg-blur{ 
     filter: blur(2px);
+    position: absolute;
+    background-color: transparent;
 }
 
 .hero-container {
@@ -42,9 +42,8 @@ body {
 }
 
 .heading {
-    font-size: 2.8rem;
+    font-size: 1.5rem;
     margin-bottom: 1rem;
-    color: #ffffff;
     font-weight: bolder;
     color: var(--primary);
 }
@@ -52,7 +51,6 @@ body {
 .hero p {
     font-size: 1.2rem;
     margin-bottom: 4rem;
-    color: #ffffff
 }
 
 .cta-button {
@@ -72,3 +70,19 @@ body {
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+
+}
+
+@media (max-width: 480px) {
+
+}
+
+@media (max-width: 320px) {
+
+}
