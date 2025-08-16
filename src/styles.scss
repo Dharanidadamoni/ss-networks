@@ -13,6 +13,10 @@ body {
     color: #333;
 }
 
+.cp{
+    cursor: pointer;
+}
+
 .hero::before {
     content: "";
     position: absolute;
@@ -55,13 +59,14 @@ body {
 
 .cta-button {
     display: inline-block;
-    padding: 12px 24px;
+    padding: 6px 18px;
     background: #00897b; /* Medium Teal */
     color: #fff;
     text-decoration: none;
     border-radius: 5px;
     font-weight: bold;
     transition: background 0.3s ease;
+    cursor: pointer;
 }
 
 .cta-button:hover {
@@ -86,3 +91,5 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 @media (max-width: 320px) {
 
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
