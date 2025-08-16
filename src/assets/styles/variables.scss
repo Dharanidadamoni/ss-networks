@@ -1,0 +1,14 @@
+:root{
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --red: #ff0000;
+    --primary: #004d40;
+}
+
+.red{
+    color: Var(--red);
+}
+
+.bg-blue{
+    background-color: var(--blue);
+}

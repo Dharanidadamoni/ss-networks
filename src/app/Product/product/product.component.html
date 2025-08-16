@@ -1,0 +1,13 @@
+<main>
+    <h1>Our High-Quality Safety Nets</h1>
+    <section class="product-listing">
+        @for (product of products; track $index) {
+        <div class="product-item">
+            <img [src]="product.imgPath">
+            <h3>{{product.heading}}</h3>
+            <p>{{product.description}}</p>
+            <a href="www.google.com" class="cta-button">Inquire Now</a>
+        </div>
+        }
+    </section>
+</main>
