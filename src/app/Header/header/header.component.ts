@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 
@@ -12,8 +12,12 @@ import { MatIconModule } from '@angular/material/icon';
 })
 export class HeaderComponent {
 
-  constructor(private _router: Router){}
+  constructor(private router: Router){}
   isMenuOpen = false;
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 
   navItems = [
     { link: '/home', icon: 'home', name: 'Home' },
@@ -23,16 +27,10 @@ export class HeaderComponent {
   ];
 
   navigate(link: string) {
-    this._router.navigateByUrl(`/${link}`);
-  }
-
-  toggleMenu() {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.router.navigateByUrl(`/${link}`);
   }
 
   closeMenu() {
     this.isMenuOpen = false;
   }
-
 }
-

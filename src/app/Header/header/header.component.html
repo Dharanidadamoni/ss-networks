@@ -1,14 +1,18 @@
-<header >
-    <div class="app-name">Secure Spaces Nets & Grills</div>
-    <button class="hamburger-icon" (click)="toggleMenu()">
-        <mat-icon>menu</mat-icon>
+<header class="header">
+    <div class="logo">SS Nets & Grills</div>
+    <nav [class.open]="isMenuOpen" class="nav-links">
+        <ul>
+            <li *ngFor="let item of navItems">
+                <a [routerLink]="item.link" (click)="closeMenu()" class="nav-item">
+                    <span class="icon"><mat-icon>{{ item.icon }}</mat-icon></span>
+                    <span class="label">{{ item.name }}</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+    <button class="menu-toggle" (click)="toggleMenu()">
+        <span *ngIf="!isMenuOpen"><mat-icon>menu</mat-icon></span>
+        <span *ngIf="isMenuOpen"><mat-icon>close</mat-icon></span>
     </button>
-    <ul class="nav-links" [class.open]="isMenuOpen">
-        <li *ngFor="let item of navItems">
-            <a [routerLink]="item.link">
-                <mat-icon>{{ item.icon }}</mat-icon>
-                <span>{{ item.name }}</span>
-            </a>
-        </li>
-    </ul>
 </header>

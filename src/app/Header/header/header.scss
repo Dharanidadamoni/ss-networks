@@ -1,101 +1,102 @@
-/* Default styles for desktop */
-.nav-text {
-  display: inline;
-}
-
-/* Styles for screens smaller than 500px */
-@media (max-width: 500px) {
-  .nav-text {
-    display: none; /* Hides the text */
-  }
-
-  .app-name{
-    font-size: 0.8rem;
-  }
-}
-
-/* Default styles for mobile (less than 500px) */
-.nav-links {
-  display: none;
-  flex-direction: column;
-  position: absolute;
-  top: 60px; /* Adjust based on your header's height */
-  right: 0;
-  width: 100%;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  color: var(--white);
-  width: 30%;
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
   background-color: var(--primary);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-.nav-links.open {
-  display: flex; /* Show the menu when it has the 'open' class */
+.logo {
+  font-size: 24px;
+  font-weight: bold;
 }
 
-.hamburger-icon {
-  display: block; /* Show the hamburger button by default */
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+.nav-links ul li {
+  list-style: none;
+}
+
+.menu-toggle {
+  display: none;
   background: none;
   border: none;
+  color: white;
+  font-size: 28px;
   cursor: pointer;
 }
 
-/* Styles for screens larger than 500px */
-@media (min-width: 500px) {
+@media (max-width: 768px) {
   .nav-links {
-    display: flex; /* Show the menu as a row */
-    position: static;
-    box-shadow: none;
+    flex-direction: column;
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background-color: var(--primary);
+    width: 100%;
+    padding: 10px 20px;
+    display: none;
+    transition: max-height 0.5s ease-out;
+    overflow: hidden;
+    max-height: 0;
   }
 
-  .hamburger-icon {
-    display: none; /* Hide the hamburger button */
+  .nav-links.open {
+    max-height: 500px;
+    transition: color 0.5s ease;
+    max-width: 40%;
+    border-radius: 0 0 0 10px ;
+    align-items: flex-start;
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block; 
   }
 }
 
+@media (min-width: 768px) {
 
-.app-name {
-    font-weight:bold;
-    align-items:end;
-    cursor: pointer;
-}
-
-header {
-    background: #004d40; /* Dark Teal */
-    color: #fff;
-    padding: 1rem 2rem;
-    position: sticky;
-    z-index: 10;
-}
-
-header {
+  .nav-links ul {
     display: flex;
-    justify-content: space-between;
+    gap: 20px;
+  }
 }
 
-
-header ul {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    align-items:center;
-    flex-wrap: wrap;
+.nav-item {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  color: white;
+  text-decoration: none;
+  padding: 4px 8px;
 }
 
-header ul li {
-    margin-left:auto;
-    margin: 0.5rem 0; 
-    margin-right: 1.5rem;
+.nav-item .icon mat-icon {
+  font-size: 20px;
+  vertical-align: middle;
 }
 
-header ul li a {
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s ease;
-      display: flex;
-    align-items: center;
-}
-
-header ul li a:hover {
-    color: #e0f2f1; /* Light Teal */
+.nav-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
 }
