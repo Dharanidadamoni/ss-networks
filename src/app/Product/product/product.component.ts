@@ -18,5 +18,9 @@ export class ProductComponent {
     
   }
 
+  navigateTo(products: any) {
+    
+  }
+
 
 }

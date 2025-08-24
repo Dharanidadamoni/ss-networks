@@ -27,6 +27,7 @@ export const ProductsData = {
 export const products = [
     {
         category:"Balcony Nets",
+        categoryCode:"BALCONY_NETS",
         categoryList:[
             {
                 imgPath:"https://www.jiomart.com/images/product/original/rvvchtipvj/sr-trends-nylon-mesh-balcony-net-bird-net-monkey-net-child-protection-net-white-12-ply-10-ft-x-10-ft-product-images-orvvchtipvj-p602742539-0-202306262008.png?im=Resize=(420,420)",
@@ -59,9 +60,11 @@ export const products = [
                 description:"Custom-fit nets for windows of all sizes. Provides maximum protection without blocking the view.",
             },
         ]
+        
     },
     {
         category:"Garden Nets",
+        categoryCode:"GARDEN_NETS",
         categoryList:[
         {
             
@@ -95,6 +98,7 @@ export const products = [
     },
     {
         category:"Sports Nets",
+        categoryCode:"SPORTS_NETS",
         categoryList:[
         {
             imgPath:"https://5.imimg.com/data5/SELLER/Default/2022/1/KM/HT/BU/7699358/cricket-net-ytvxtqk.jpg",
@@ -125,6 +129,7 @@ export const products = [
     },
     {
         category:"Grills",
+        categoryCode:"GRILLS",
         categoryList:[
         {
             imgPath:"https://5.imimg.com/data5/ANDROID/Default/2023/1/PI/LG/ZM/14131522/product-jpeg-500x500.jpg",
@@ -155,6 +160,7 @@ export const products = [
     },
     {
         category:"Bamboo Curtains",
+        categoryCode:"BAMBOO_CURTAINS",
         categoryList:[
         {
             imgPath:"https://m.media-amazon.com/images/I/81mhDp3F0uL.jpg",

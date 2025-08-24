@@ -1,24 +1,29 @@
 <main>
-    <section class="content">
-        <h1>Get in Touch</h1>
-        <p>Ready to secure your home? Contact us for a free consultation or quote!</p>
-        <form action="#" method="post">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+  <section class="content">
+    <h1>Get in Touch</h1>
+    <p>Ready to secure your home? Contact us for a free consultation or quote!</p>
 
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+    <form (ngSubmit)="onSubmit()">
+      <label for="name">Name:</label>
+      <input type="text" [(ngModel)]="name" required />
 
-            <label for="message">Message:</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+      <label for="email">Email:</label>
+      <input type="email" [(ngModel)]="email" required />
 
-            <button type="submit" class="cta-button">Send Message</button>
-        </form>
-        <div class="contact-info">
-            <h3>Other Ways to Reach Us:</h3>
-            <p>Phone: +91 98765 43210</p>
-            <p>Email: contact us chintharajashekar102gmail.com
-            <p>Address: 123 Safe Home Street, City, State, ZIP</p>
-        </div>
-    </section>
+      <label for="message">Message:</label>
+      <textarea id="message" [(ngModel)]="message" rows="4" required></textarea>
+
+      <button type="submit" class="cta-button" [disabled]="sending">Send Message</button>
+    </form>
+
+    <div *ngIf="success" class="success-msg">Your message has been sent successfully!</div>
+    <div *ngIf="error" class="error-msg">Oops! Something went wrong. Try again.</div>
+
+    <div class="contact-info">
+      <h3>Other Ways to Reach Us:</h3>
+      <p>Phone: +91 98765 43210</p>
+      <p>Email: contact us chintharajashekar102gmail.com</p>
+      <p>Address: 123 Safe Home Street, City, State, ZIP</p>
+    </div>
+  </section>
 </main>
