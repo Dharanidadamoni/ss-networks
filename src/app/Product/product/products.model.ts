@@ -31,32 +31,32 @@ export const products = [
         categoryList:[
             {
                 imgPath:"https://www.jiomart.com/images/product/original/rvvchtipvj/sr-trends-nylon-mesh-balcony-net-bird-net-monkey-net-child-protection-net-white-12-ply-10-ft-x-10-ft-product-images-orvvchtipvj-p602742539-0-202306262008.png?im=Resize=(420,420)",
-                heading:"Standard Balcony Net",
-                description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
+                heading:"Standard Building Net",
+                description:"Perfect for buildings and small open spaces. Made from UV-stabilized polyethylene.",
             },
             {
                 imgPath:"https://m.media-amazon.com/images/I/81xmc3NmkjL._UF894,1000_QL80_.jpg",
-                heading:"Window Safety Net",
+                heading:"Balcony Safety Net",
                 description:"Custom-fit nets for windows of all sizes. Provides maximum protection without blocking the view.",
             },
             {
                 imgPath:"https://images.meesho.com/images/products/518684146/inpks_512.webp?width=512",
-                heading:"Standard Balcony Net",
-                description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
+                heading:"Balcony Privacy & Safety Net",
+                description:"Secure your balcony with this durable green safety net, which offers privacy and protection from birds. ",
             },
             {
                 imgPath:"https://www.jiomart.com/images/product/original/rvvchtipvj/sr-trends-nylon-mesh-balcony-net-bird-net-monkey-net-child-protection-net-white-12-ply-10-ft-x-10-ft-product-images-orvvchtipvj-p602742539-1-202306262008.png?im=Resize=(420,420)",
                 heading:"Standard Balcony Net",
-                description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
+                description:"A high-quality white safety net provides unobtrusive protection for your balcony, ensuring safety while maintaining your view..",
             },
             {
                 imgPath:"https://ubg.ge/wp-content/uploads/2018/04/8002.jpg",
-                heading:"Standard Balcony Net",
+                heading:"Invisible Balcony Safety Net",
                 description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
             },
             {
                 imgPath:"https://rukminim2.flixcart.com/image/704/844/kq6yefk0/insect-net/u/b/x/g-18ply-10-ft-x-45-ft-nylon-mesh-balcony-net-bird-net-monkey-net-original-imag4976zmrftqvb.jpeg?q=90&crop=false",
-                heading:"Window Safety Net",
+                heading:"Discreet Balcony Protection",
                 description:"Custom-fit nets for windows of all sizes. Provides maximum protection without blocking the view.",
             },
         ]
@@ -69,12 +69,12 @@ export const products = [
         {
             
             imgPath:"https://polymernets.com/upload/product/top-banner/6/banner1.jpg",
-            heading:"Terrace & Garden Net",
+            heading:"Garden Net",
             description:"A heavy-duty solution for larger areas like terraces and gardens.",
         },
         {
             imgPath:"https://mlhobevaucyf.i.optimole.com/w:1200/h:742/q:mauto/f:best/ig:avif/https://novo3ds.in/wp-content/uploads/2023/06/AG121_Shade_nets.jpg",
-            heading:"Standard Balcony Net",
+            heading:"Terrace Nets",
             description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
         },
         {
