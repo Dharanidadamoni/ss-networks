@@ -1,27 +1,21 @@
 <footer class="footer">
-    <p>&copy; 2025 BirdGuard Nets. All rights reserved.</p>
+    <div class="footer-section company">
+        <span class="footer-logo">
+            <mat-icon>security</mat-icon> BirdGuard Nets
+        </span>
+        <p class="footer-desc">Protecting homes & families since 2010</p>
+    </div>
+    <nav class="footer-section nav">
+        <a routerLink="/about-us" (click)="scrollToTop()">About Us</a>
+        <a routerLink="/products" (click)="scrollToTop()">Products</a>
+        <a routerLink="/contact-us" (click)="scrollToTop()">Contact</a>
+    </nav>
+    <div class="footer-section social">
+        <a href="https://facebook.com" target="_blank" aria-label="Facebook" (click)="openSocial('facebook', $event)"><mat-icon>facebook</mat-icon></a>
+        <a href="https://instagram.com" target="_blank" aria-label="Instagram" (click)="openSocial('instagram', $event)"><mat-icon>instagram</mat-icon></a>
+        <a href="https://wa.me/1234567890" target="_blank" aria-label="WhatsApp" (click)="openSocial('whatsapp', $event)"><mat-icon>whatsapp</mat-icon></a>
+    </div>
+    <div class="footer-section copyright">
+        <p>&copy; {{ currentYear }} BirdGuard Nets. All rights reserved.</p>
+    </div>
 </footer>
-
-<!-- 
-<div>
-    <div>
-        <fa-icon icon="bars"></fa-icon>
-    </div>
-
-    <div>
-        <i class="fa-solid fa-question-circle"></i>
-        <span><mat-icon>mail</mat-icon></span>
-    </div>
-
-    <div>
-        <mat-icon fontIcon="fa-instagram"></mat-icon> 
-        <span><mat-icon>call</mat-icon></span>
-        
-    </div>
-    <div>
-        <span><mat-icon>youtube</mat-icon></span>
-        <span><mat-icon>facebook</mat-icon></span>
-    </div>
-    <div>
-    </div>
-</div> -->

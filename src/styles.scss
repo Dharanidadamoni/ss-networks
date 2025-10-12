@@ -11,6 +11,22 @@ body {
     line-height: 1.8;
     background-color: #f8f8f8;
     color: #333;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+    padding-bottom: 90px; /* Height of the footer */
+}
+
+.footer {
+    flex-shrink: 0;
+    position: relative !important;
+    left: 0;
+    bottom: 0;
+    width: 100%;
 }
 
 .cp{

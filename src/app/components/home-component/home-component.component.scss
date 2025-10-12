@@ -25,3 +25,92 @@
     margin-bottom: 1rem;
     color: #00695c;
 }
+
+/* Carousel Styles for Customer Reviews */
+.review-carousel {
+    
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0 1rem 0;
+}
+
+ .review-content {
+     background: #f9f9f9;
+     border-radius: 12px;
+     box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+     padding: 2rem 2.5rem;
+     max-width: 500px;
+     min-width: 280px;
+     text-align: center;
+     transition: box-shadow 0.3s;
+     height: 160px;
+     overflow: hidden;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+}
+
+.review-content p {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.review-content cite {
+    display: block;
+    font-style: normal;
+    color: #00695c;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+.carousel-btn {
+    background: #00695c;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.carousel-btn:hover {
+    background: #004d40;
+}
+
+.carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+.carousel-indicators span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.carousel-indicators span.active {
+    background: #00695c;
+}
+
+.carousel-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.show-more {
+    color: #00695c;
+    cursor: pointer;
+    font-weight: 600;
+    margin-left: 8px;
+    text-decoration: underline;
+}

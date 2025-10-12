@@ -56,7 +56,7 @@ export class ContactUsComponent {
   }
 
   openWhatsApp(): void {
-    const phoneNumber = '919542527057'; // Replace with your WhatsApp number (with country code)
+    const phoneNumber =  '8341410985'//'8121317131';
     const message = encodeURIComponent('Hello! I’d like to know more about your services.');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
