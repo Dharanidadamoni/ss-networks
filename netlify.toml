@@ -1,78 +1,8 @@
-# Netlify Configuration for SS Safety Nets
-
 [build]
-  # Build command to create production build
-  # Netlify automatically runs npm install before this command
   command = "npm run build"
-  # Directory to publish (Angular output directory)
-  publish = "dist/ss-nets/browser"
-  # Functions directory (if using Netlify Functions)
-  functions = "netlify/functions"
+  publish = "dist/your-project-name"
 
-# Environment variables (optional - can also be set in Netlify UI)
-[build.environment]
-  NODE_VERSION = "18"
-  NODE_ENV = "production"
-  NPM_FLAGS = "--legacy-peer-deps"
-  SKIP_NGCC = "true"
-
-# Redirect rules for Single Page Application (SPA)
-# This ensures that all routes are handled by the Angular router
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-
-  
-
-# Custom headers
-[[headers]]
-  for = "/*"
-  [headers.values]
-    X-Frame-Options = "DENY"
-    X-Content-Type-Options = "nosniff"
-    X-XSS-Protection = "1; mode=block"
-    Referrer-Policy = "strict-origin-when-cross-origin"
-
-# Cache control headers for static assets
-[[headers]]
-  for = "/assets/*"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.js"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-[[headers]]
-  for = "*.css"
-  [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
-
-# HTML files - shorter cache
-[[headers]]
-  for = "/*.html"
-  [headers.values]
-    Cache-Control = "public, max-age=3600"
-
-# Rewrite API requests if you have backend API
-# Uncomment and modify based on your backend URL
-# [[redirects]]
-#   from = "/api/*"
-#   to = "https://your-backend-api.com/api/:splat"
-#   status = 200
-#   force = true
-
-# Performance settings
-[context.production]
-  command = "npm run build"
-  publish = "dist/ss-nets/browser"
-
-[context.preview]
-  command = "npm run build"
-  publish = "dist/ss-nets/browser"
-
-[context.deploy-preview]
-  command = "npm run build"
-  publish = "dist/ss-nets/browser"
