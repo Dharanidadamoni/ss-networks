@@ -1,7 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, FormsModule, Validators  } from '@angular/forms';
-import emailjs, { EmailJSResponseStatus } from 'emailjs-com';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-contact-us',
@@ -19,11 +18,15 @@ export class ContactUsComponent {
   mobile: string = "";
   message: string = "";
 
-
-  constructor() {
-  }
+  constructor() {}
 
   onSubmit(): void {
+    // Validate inputs
+    if (!this.name || !this.mobile || !this.message) {
+      this.error = true;
+      setTimeout(() => this.error = false, 5000);
+      return;
+    }
 
     this.sending = true;
     this.success = false;
@@ -36,29 +39,38 @@ export class ContactUsComponent {
       message: this.message
     };
 
-    // emailjs.send(
-    //   'service_szdpztl',       // e.g. service_ID
-    //   'template_ndojoam',      // e.g. template_ID
-    //   templateParams,
-    //   '_-kxSWQAbLGUUzRUI'        // e.g. user_ID
-    // ).then((response: EmailJSResponseStatus) => {
-    //   console.log('SUCCESS!', response.status, response.text);
-    //   this.sending = false;
-    //   this.success = true;
-    //   this.contactForm.reset();
-    // }, (err) => {
-    //   console.error('FAILED...', err);
-    //   this.sending = false;
-    //   this.error = true;
-    // });
-    this.openWhatsApp()
+    // Open WhatsApp with form data
+    this.openWhatsAppWithMessage(templateParams);
   }
 
   openWhatsApp(): void {
-    const phoneNumber =  '+918121317131';
-    const message = encodeURIComponent('Hello! I would like to know more about your services.');
+    const phoneNumber = '+918121317131';
+    const message = encodeURIComponent('Hello SS Nets & Grills! 👋\n\nI would like to know more about your premium safety net solutions.\n\nThank you!');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
   }
 
+  private openWhatsAppWithMessage(params: any): void {
+    const phoneNumber = '+918121317131';
+    const whatsappMessage = `Hello SS Nets & Grills! 👋\n\n*Customer Details:*\n\nName: ${params.name}\nMobile: ${params.mobile}\n\n*Message:*\n${params.message}\n\nThank you!`;
+    const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+    
+    // Open WhatsApp and show success message
+    window.open(url, '_blank');
+    this.sending = false;
+    this.success = true;
+    
+    // Reset form
+    this.resetForm();
+    
+    // Hide success message after 5 seconds
+    setTimeout(() => this.success = false, 5000);
+  }
+
+  private resetForm(): void {
+    this.name = "";
+    this.email = "";
+    this.mobile = "";
+    this.message = "";
+  }
 }

@@ -1,24 +1,61 @@
-<main>
-    <span class="p-10">
-        Our High Quality Safety Nets
-    </span>
+<main class="products-container">
+    <!-- Premium Header Section -->
+    <section class="products-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <div class="hero-badge">✨ Premium Safety Solutions</div>
+            <h1 class="hero-title">Our High Quality Safety Nets</h1>
+            <p class="hero-subtitle">Professional-grade protection engineered for durability, safety, and style. Trusted by thousands of families.</p>
+        </div>
+    </section>
 
-    <section>
+    <!-- Products Grid Section -->
+    <section class="products-section">
         @for (category of products; track $index) {
-            <h2 class="p-10">{{category.category}}</h2>
-            <div class="product-listing-wrapper">
-                <div class="product-listing">
+            <div class="category-block">
+                <div class="category-header">
+                    <div class="category-title-wrapper">
+                        <h2 class="category-title">{{category.category}}</h2>
+                        <span class="category-badge">Premium Quality</span>
+                    </div>
+                    <div class="category-divider"></div>
+                </div>
+                
+                <div class="products-grid">
                     @for (product of category.categoryList.slice(0, 6); track $index) {
-                        <div class="product-item">
-                            <img [src]="product.imgPath" />
-                            <h6>{{product.heading}}</h6>
-                            <p>{{product.description}}</p>
-                            <a class="cta-button" (click)="inquire(category)">Inquire Now</a>
+                        <div class="product-card">
+                            <div class="card-image-wrapper">
+                                <img [src]="product.imgPath" class="product-image" [alt]="product.heading" />
+                                <div class="image-overlay">
+                                    <span class="overlay-text">Premium Quality</span>
+                                </div>
+                            </div>
+                            
+                            <div class="card-content">
+                                <h3 class="product-heading">{{product.heading}}</h3>
+                                <p class="product-description">{{product.description}}</p>
+                                
+                                <div class="card-features">
+                                    <span class="feature-tag">✓ Premium</span>
+                                    <span class="feature-tag">✓ Durable</span>
+                                </div>
+                                
+                                <button class="inquire-btn" (click)="inquire(category)">
+                                    <span>Inquire Now</span>
+                                    <span class="btn-icon">→</span>
+                                </button>
+                            </div>
                         </div>
                     }
-                    <div class="product-item show-all-box">
-                        <a (click)="navigateTo(products)" class="show-all-link">Show All</a>
-                    </div>
+                    
+                    <!-- <div class="product-card show-all-card">
+                        <div class="show-all-content">
+                            <span class="show-all-icon">📋</span>
+                            <h3>View All Products</h3>
+                            <p>Explore our complete collection</p>
+                            <a (click)="navigateTo(products)" class="show-all-link">View All →</a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
         }

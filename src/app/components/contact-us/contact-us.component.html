@@ -1,32 +1,169 @@
-<main>
-  <section class="content">
-    <div class="pl-20">Get in Touch</div>
-    <p class="pl-20">Ready to secure your home? Contact us for a free consultation or quote!</p>
+<main class="contact-container">
+  <!-- Professional Hero Section -->
+  <section class="contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <div class="hero-badge">📞 Get in Touch</div>
+      <h1 class="hero-title">Contact SS Safety Nets</h1>
+      <p class="hero-subtitle">Ready to secure your home? Contact us for a free consultation, expert advice, and personalized quotes. We're here to help!</p>
+    </div>
+  </section>
 
-    <form (ngSubmit)="onSubmit()" class="form textarea">
-      <label for="name">Name:</label>
-      <input type="text" [(ngModel)]="name" required />
+  <!-- Main Contact Section -->
+  <section class="contact-main">
+    <div class="contact-wrapper">
+      <!-- Left: Contact Form -->
+      <div class="form-container">
+        <div class="form-header">
+          <h2 class="form-title">📝 Send Us a Message</h2>
+          <p class="form-subtitle">Fill out the form below and we'll get back to you shortly</p>
+        </div>
 
-      <!-- <label for="email">Email:</label>
-      <input type="email" [(ngModel)]="email" /> -->
+        <form (ngSubmit)="onSubmit()" class="contact-form">
+          <div class="form-group">
+            <label for="name" class="form-label">Full Name *</label>
+            <input 
+              type="text" 
+              id="name"
+              [(ngModel)]="name" 
+              name="name"
+              placeholder="Enter your full name"
+              required 
+              class="form-input"
+            />
+          </div>
 
-      <label for="mobile">Mobile Number:</label>
-      <input type="tel" [(ngModel)]="mobile" required />
+          <div class="form-group">
+            <label for="mobile" class="form-label">Mobile Number *</label>
+            <input 
+              type="tel" 
+              id="mobile"
+              [(ngModel)]="mobile" 
+              name="mobile"
+              placeholder="Enter your 10-digit mobile number"
+              required 
+              class="form-input"
+            />
+          </div>
 
-      <label for="message">Message:</label>
-      <textarea id="message" [(ngModel)]="message" rows="4" required></textarea>
+          <div class="form-group">
+            <label for="message" class="form-label">Message *</label>
+            <textarea 
+              id="message" 
+              [(ngModel)]="message" 
+              name="message"
+              placeholder="Tell us about your requirements, product interest, or any questions"
+              rows="5" 
+              required 
+              class="form-textarea"
+            ></textarea>
+          </div>
 
-      <button type="submit" class="cta-button" [disabled]="sending">Send Message</button>
-    </form>
+          <button type="submit" class="submit-btn" [disabled]="sending">
+            <span *ngIf="!sending">Send Message →</span>
+            <span *ngIf="sending">Sending...</span>
+          </button>
+        </form>
 
-    <div *ngIf="success" class="success-msg">Your message has been sent successfully!</div>
-    <div *ngIf="error" class="error-msg">Oops! Something went wrong. Try again.</div>
+        <div *ngIf="success" class="alert alert-success">
+          <span class="alert-icon">✓</span>
+          <div class="alert-content">
+            <strong>Success!</strong>
+            <p>Your message has been sent successfully. We'll contact you soon!</p>
+          </div>
+        </div>
+        <div *ngIf="error" class="alert alert-error">
+          <span class="alert-icon">✕</span>
+          <div class="alert-content">
+            <strong>Error!</strong>
+            <p>Something went wrong. Please try again or contact us directly.</p>
+          </div>
+        </div>
+      </div>
 
-    <div class="contact-info">
-      <h3><b>Other Ways to Reach Us:</b></h3>
-      <p><b>Phone: </b> +918121317131, +919948506046, +917569385372</p>
-      <p><b>Email:</b> sainishiva6214&#64;gmail.com</p>
-      <p><b>Address: </b> 5-5-555, Malakunta, Nampally, Hyderabad, Telangana 500001</p>
+      <!-- Right: Contact Methods -->
+      <div class="contact-methods">
+        <div class="methods-header">
+          <h2 class="methods-title">Other Ways to Reach Us</h2>
+          <p class="methods-subtitle">Choose the most convenient way to contact us</p>
+        </div>
+
+        <div class="methods-grid">
+          <!-- Phone Cards -->
+          <div class="contact-card phone-card">
+            <div class="card-icon-wrapper">
+              <span class="card-icon">📱</span>
+            </div>
+            <h3 class="card-title">Phone</h3>
+            <p class="card-description">Call us during business hours</p>
+            <div class="contact-details">
+              <a href="tel:+918121317131" class="contact-link">+91 8121 317 131</a>
+              <!-- <a href="tel:+919948506046" class="contact-link">+91 9948 506 046</a>
+              <a href="tel:+917569385372" class="contact-link">+91 7569 385 372</a> -->
+            </div>
+            <button class="card-action-btn" onclick="window.location.href='tel:+918121317131'">
+              Call Now
+            </button>
+          </div>
+
+          <!-- WhatsApp Card -->
+          <div class="contact-card whatsapp-card">
+            <div class="card-icon-wrapper whatsapp">
+              <span class="card-icon">💬</span>
+            </div>
+            <h3 class="card-title">WhatsApp</h3>
+            <p class="card-description">Quick replies on WhatsApp</p>
+            <p class="contact-detail-text">Chat with us in real-time for instant support</p>
+            <button class="card-action-btn whatsapp-btn" (click)="openWhatsApp()">
+              Chat on WhatsApp
+            </button>
+          </div>
+
+          <!-- Email Card -->
+          <div class="contact-card email-card">
+            <div class="card-icon-wrapper email">
+              <span class="card-icon">✉️</span>
+            </div>
+            <h3 class="card-title">Email</h3>
+            <p class="card-description">Send us an email anytime</p>
+            <div class="contact-details">
+              <a href="mailto:sainishiva6214@gmail.com" class="contact-email">
+                sainishiva6214&#64;gmail.com
+              </a>
+            </div>
+            <button class="card-action-btn email-btn" onclick="window.location.href='mailto:sainishiva6214@gmail.com'">
+              Send Email
+            </button>
+          </div>
+
+          <!-- Address Card -->
+          <div class="contact-card address-card">
+            <div class="card-icon-wrapper address">
+              <span class="card-icon">📍</span>
+            </div>
+            <h3 class="card-title">Visit Us</h3>
+            <p class="card-description">Our office location</p>
+            <p class="contact-address">
+              5-5-555, Malakunta, <br>
+              Nampally, Hyderabad, <br>
+              Telangana 500001
+            </p>
+            <button class="card-action-btn address-btn" onclick="window.open('https://maps.google.com/?q=5-5-555+Malakunta+Nampally+Hyderabad', '_blank')">
+              View on Map
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Call-to-Action Section -->
+  <section class="cta-section">
+    <h2 class="cta-title">Have Questions?</h2>
+    <p class="cta-subtitle">Our team of experts is ready to help you find the perfect safety solution for your home</p>
+    <div class="cta-buttons">
+      <button class="cta-btn primary" (click)="openWhatsApp()">Start Live Chat</button>
+      <a href="tel:+918121317131" class="cta-btn secondary">Call Us Now</a>
     </div>
   </section>
 </main>

@@ -1,9 +1,31 @@
-:root{
-    --blue: #1e90ff;
+:root {
+    /* Primary Colors */
+    --primary: #00897b;           /* Teal - Main brand color */
+    --primary-dark: #004d40;      /* Dark Teal */
+    --primary-light: #00bcd4;     /* Light Teal - Accents */
+
+    /* Secondary Colors */
+    --secondary: #ff6b35;         /* Warm Coral - CTAs and highlights */
+    --secondary-dark: #d84315;    /* Dark Coral */
+    --secondary-light: #ffb74d;   /* Soft Gold - Light accents */
+
+    /* Neutral Colors */
     --white: #ffffff;
+    --light-gray: #f5f5f5;
+    --medium-gray: #e0e0e0;
+    --dark-gray: #424242;
+    --text-dark: #212121;
+    --text-light: #757575;
+
+    /* Status Colors */
+    --success: #4caf50;
+    --warning: #ff9800;
+    --error: #f44336;
+    --info: #2196f3;
+
+    /* Additional Colors */
+    --blue: #1e90ff;
     --red: #ff0000;
-    --primary: #004d40;
-    --secondary: #901d78;
 }
 
 .red{
