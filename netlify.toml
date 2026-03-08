@@ -2,7 +2,8 @@
 
 [build]
   # Build command to create production build
-  command = "npm run build"
+  # Using npm ci for clean dependency installation, then building
+  command = "npm ci --legacy-peer-deps && npm run build"
   # Directory to publish (Angular output directory)
   publish = "dist/ss-nets/browser"
   # Functions directory (if using Netlify Functions)
@@ -12,6 +13,7 @@
 [build.environment]
   NODE_VERSION = "18"
   NODE_ENV = "production"
+  SKIP_NGCC = "true"
 
 # Redirect rules for Single Page Application (SPA)
 # This ensures that all routes are handled by the Angular router
@@ -61,13 +63,13 @@
 
 # Performance settings
 [context.production]
-  command = "npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "dist/ss-nets/browser"
 
 [context.preview]
-  command = "npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "dist/ss-nets/browser"
 
 [context.deploy-preview]
-  command = "npm run build"
+  command = "npm ci --legacy-peer-deps && npm run build"
   publish = "dist/ss-nets/browser"
