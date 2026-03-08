@@ -23,6 +23,8 @@
   to = "/index.html"
   status = 200
 
+  
+
 # Custom headers
 [[headers]]
   for = "/*"
