@@ -12,18 +12,18 @@ import {MatChipsModule} from '@angular/material/chips';
 export class ProductComponent {
   products = products;
   chips = ProductsData.chipOptions;
-  private whatsappPhone = '919876543210'; // Replace with your WhatsApp business number (include country code)
+  private whatsappPhone = '+918121317131';
 
-  inquire(product: any) {
-    const message = this.generateWhatsAppMessage(product);
+  inquire(category: any) {
+    const message = this.generateWhatsAppMessage(category);
     this.redirectToWhatsApp(message);
   }
 
-  private generateWhatsAppMessage(product: any): string {
+  private generateWhatsAppMessage(category: any): string {
     const greeting = this.getTimeBasedGreeting();
-    const categoryEmoji = this.getCategoryEmoji(product.category);
+    const categoryEmoji = this.getCategoryEmoji(category.category);
     
-    const message = `${greeting}! 👋\n\nI'm interested in the following product:\n\n${categoryEmoji} *${product.heading}*\n\nCategory: ${product.category}\n\nDescription: ${product.description}\n\nCould you please provide more details and pricing information?\n\nThank you!`;
+    const message = `${greeting}! 👋\n\nI'm interested in the following product:\n\n${categoryEmoji} *${category.category}*\n\nCategory: ${category.category}\n\nCould you please provide more details and pricing information?\n\nThank you!`;
     
     return message;
   }
@@ -47,8 +47,7 @@ export class ProductComponent {
   }
 
   private redirectToWhatsApp(message: string): void {
-    const encodedMessage = encodeURIComponent(message);
-    const whatsappURL = `https://wa.me/${this.whatsappPhone}?text=${encodedMessage}`;
+    const whatsappURL = `https://wa.me/${this.whatsappPhone}?text=${encodeURIComponent(message)}`;
     window.open(whatsappURL, '_blank');
   }
 

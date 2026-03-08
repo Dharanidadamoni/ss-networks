@@ -63,6 +63,36 @@ export const products = [
         
     },
     {
+        category:"Bamboo Curtains",
+        categoryCode:"BAMBOO_CURTAINS",
+        categoryList:[
+        {
+            imgPath:"https://m.media-amazon.com/images/I/81mhDp3F0uL.jpg",
+            heading:"Safety Grills",
+            description:"",
+        },
+        {
+            imgPath:"https://image.made-in-china.com/202f0j00YgGvbePWJroh/Bamboo-Roller-Curtains-Window-Blinds.webp",
+            heading:"Safety Grills",
+            description:"",
+        },
+        {
+            imgPath:"https://www.bamboocurtains.in/wp-content/uploads/2022/10/res.jpg",
+            heading:"Safety Grills",
+            description:"",
+        },
+        {
+            imgPath:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eMi8pysTCnz60h11b5xJ_H74akHQ0gjN0g&s",
+            heading:"Safety Grills",
+            description:"",
+        },
+        {
+            imgPath:"https://bandasenterprises.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-09-at-11.05.55-AM-1-1.jpeg",
+            heading:"Safety Grills",
+            description:"",
+        },]
+    },
+    {
         category:"Garden Nets",
         categoryCode:"GARDEN_NETS",
         categoryList:[
@@ -157,36 +187,6 @@ export const products = [
             description:"Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like)",
         },
         ]
-    },
-    {
-        category:"Bamboo Curtains",
-        categoryCode:"BAMBOO_CURTAINS",
-        categoryList:[
-        {
-            imgPath:"https://m.media-amazon.com/images/I/81mhDp3F0uL.jpg",
-            heading:"Safety Grills",
-            description:"",
-        },
-        {
-            imgPath:"https://image.made-in-china.com/202f0j00YgGvbePWJroh/Bamboo-Roller-Curtains-Window-Blinds.webp",
-            heading:"Safety Grills",
-            description:"",
-        },
-        {
-            imgPath:"https://www.bamboocurtains.in/wp-content/uploads/2022/10/res.jpg",
-            heading:"Safety Grills",
-            description:"",
-        },
-        {
-            imgPath:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7eMi8pysTCnz60h11b5xJ_H74akHQ0gjN0g&s",
-            heading:"Safety Grills",
-            description:"",
-        },
-        {
-            imgPath:"https://bandasenterprises.com/wp-content/uploads/2025/01/WhatsApp-Image-2025-01-09-at-11.05.55-AM-1-1.jpeg",
-            heading:"Safety Grills",
-            description:"",
-        },]
     }
     
 ]
