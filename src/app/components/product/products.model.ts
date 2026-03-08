@@ -50,14 +50,14 @@ export const products = [
                 description:"A high-quality white safety net provides unobtrusive protection for your balcony, ensuring safety while maintaining your view..",
             },
             {
-                imgPath:"https://ubg.ge/wp-content/uploads/2018/04/8002.jpg",
+                imgPath:"https://bestcurtainsindubai.ae/wp-content/uploads/2023/12/balcony-saftey-nets1.jpg",
                 heading:"Invisible Balcony Safety Net",
-                description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
+                description:"Custom-fit nets for windows of all sizes. Provides maximum protection without blocking the view.",
             },
             {
-                imgPath:"https://rukminim2.flixcart.com/image/704/844/kq6yefk0/insect-net/u/b/x/g-18ply-10-ft-x-45-ft-nylon-mesh-balcony-net-bird-net-monkey-net-original-imag4976zmrftqvb.jpeg?q=90&crop=false",
+                imgPath:"",
                 heading:"Discreet Balcony Protection",
-                description:"Custom-fit nets for windows of all sizes. Provides maximum protection without blocking the view.",
+                description:"Perfect for balconies and small open spaces. Made from UV-stabilized polyethylene.",
             },
         ]
         

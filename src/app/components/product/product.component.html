@@ -1,9 +1,11 @@
 <main>
-    <h5>Our High Quality Safety Nets</h5>
+    <span class="p-10">
+        Our High Quality Safety Nets
+    </span>
 
     <section>
         @for (category of products; track $index) {
-            <h2>{{category.category}}</h2>
+            <h2 class="p-10">{{category.category}}</h2>
             <div class="product-listing-wrapper">
                 <div class="product-listing">
                     @for (product of category.categoryList.slice(0, 6); track $index) {

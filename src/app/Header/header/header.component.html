@@ -1,5 +1,8 @@
 <header class="header">
-    <div class="logo cp" [routerLink]="'./home'">SS Nets & Grills</div>
+    <div class="logo cp" [routerLink]="'./home'">
+        <mat-icon>security</mat-icon> &nbsp;
+        <div> SS Nets & Grills</div>
+    </div>
     <nav [class.open]="isMenuOpen" class="nav-links">
         <ul>
             <li *ngFor="let item of navItems">

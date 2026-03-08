@@ -12,6 +12,14 @@ form label {
 
 form input[type="text"],
 form input[type="email"],
+form input[type="tel"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
 form textarea {
     width: 100%;
     padding: 12px;
@@ -26,6 +34,8 @@ form textarea {
 }
 
 .contact-info {
+    max-width: 100%;
+    margin: 40px, auto;
     text-align: center;
 }
 

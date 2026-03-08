@@ -21,7 +21,11 @@ ol,ul {
 .logo {
   font-size: 24px;
   font-weight: bold;
+  display: flex;
+  align-items: center;
 }
+
+
 
 .nav-links {
   display: flex;

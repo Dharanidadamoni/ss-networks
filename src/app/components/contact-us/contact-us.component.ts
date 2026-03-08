@@ -16,7 +16,9 @@ export class ContactUsComponent {
   error: boolean = false;
   name: string = "";
   email: string = "";
+  mobile: string = "";
   message: string = "";
+
 
   constructor() {
   }
@@ -30,12 +32,9 @@ export class ContactUsComponent {
     const templateParams = {
       name: this.name,
       email: this.email,
+      mobile: this.mobile,
       message: this.message
     };
-
-    console.log(templateParams);
-    alert('Success');
-    debugger
 
     // emailjs.send(
     //   'service_szdpztl',       // e.g. service_ID
@@ -56,8 +55,8 @@ export class ContactUsComponent {
   }
 
   openWhatsApp(): void {
-    const phoneNumber =  '8341410985'//'8121317131';
-    const message = encodeURIComponent('Hello! I’d like to know more about your services.');
+    const phoneNumber =  '+918121317131';
+    const message = encodeURIComponent('Hello! I would like to know more about your services.');
     const url = `https://wa.me/${phoneNumber}?text=${message}`;
     window.open(url, '_blank');
   }

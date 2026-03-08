@@ -40,7 +40,7 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url(../src/assets/imgs/balcony-net1.png);
+    background-image: url(../src/assets/images/balcony-net1.png);
     background-attachment: fixed; /* Keep the fixed background behavior */
     background-size: cover;           /* Makes it responsive */
     background-position: center;      /* Center the image */
@@ -109,3 +109,45 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+@for $i from 1 through 30 {
+    .p-#{$i * 10} {
+        padding: #{$i * 10}px;
+    }
+}
+
+@for $i from 1 through 30 {
+    .m-#{$i * 10} {
+        margin: #{$i * 10}px;
+    }
+}
+
+$directions: (
+  't': top,
+  'b': bottom,
+  'l': left,
+  'r': right
+);
+
+@for $i from 1 through 30 {
+  @each $abbr, $dir in $directions {
+    .p#{$abbr}-#{$i * 10} {
+      padding-#{$dir}: #{$i * 10}px;
+    }
+  }
+}
+
+$directions: (
+  't': top,
+  'b': bottom,
+  'l': left,
+  'r': right
+);
+
+@for $i from 1 through 30 {
+  @each $abbr, $dir in $directions {
+    .p#{$abbr}-#{$i * 10} { padding-#{$dir}: #{$i * 10}px; }
+    .m#{$abbr}-#{$i * 10} { margin-#{$dir}: #{$i * 10}px; }
+  }
+}
